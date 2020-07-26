@@ -22,6 +22,212 @@ pub struct Universe {
 
 #[wasm_bindgen]
 impl Universe {
+
+    pub fn add_pulsar(&mut self, row: u32, column: u32) {
+        if ( row - 6 )  > 0 && ( column - 6 ) > 0 && ( row + 6 ) < self.height - 1 && ( column + 6 ) < self.width - 1 {
+            self.cells.set(self.get_index(row+6, column-6), false);
+            self.cells.set(self.get_index(row+6, column-5), false);
+            self.cells.set(self.get_index(row+6, column-4), true);
+            self.cells.set(self.get_index(row+6, column-3), true);
+            self.cells.set(self.get_index(row+6, column-2), true);
+            self.cells.set(self.get_index(row+6, column-1), false);
+            self.cells.set(self.get_index(row+6, column), false);
+            self.cells.set(self.get_index(row+6, column+1), false);
+            self.cells.set(self.get_index(row+6, column+2), true);
+            self.cells.set(self.get_index(row+6, column+3), true);
+            self.cells.set(self.get_index(row+6, column+4), true);
+            self.cells.set(self.get_index(row+6, column+5), false);
+            self.cells.set(self.get_index(row+6, column+6), false);
+
+            self.cells.set(self.get_index(row+5, column-6), false);
+            self.cells.set(self.get_index(row+5, column-5), false);
+            self.cells.set(self.get_index(row+5, column-4), false);
+            self.cells.set(self.get_index(row+5, column-3), false);
+            self.cells.set(self.get_index(row+5, column-2), false);
+            self.cells.set(self.get_index(row+5, column-1), false);
+            self.cells.set(self.get_index(row+5, column), false);
+            self.cells.set(self.get_index(row+5, column+1), false);
+            self.cells.set(self.get_index(row+5, column+2), false);
+            self.cells.set(self.get_index(row+5, column+3), false);
+            self.cells.set(self.get_index(row+5, column+4), false);
+            self.cells.set(self.get_index(row+5, column+5), false);
+            self.cells.set(self.get_index(row+5, column+6), false);
+
+            self.cells.set(self.get_index(row+4, column-6), true);
+            self.cells.set(self.get_index(row+4, column-5), false);
+            self.cells.set(self.get_index(row+4, column-4), false);
+            self.cells.set(self.get_index(row+4, column-3), false);
+            self.cells.set(self.get_index(row+4, column-2), false);
+            self.cells.set(self.get_index(row+4, column-1), true);
+            self.cells.set(self.get_index(row+4, column), false);
+            self.cells.set(self.get_index(row+4, column+1), true);
+            self.cells.set(self.get_index(row+4, column+2), false);
+            self.cells.set(self.get_index(row+4, column+3), false);
+            self.cells.set(self.get_index(row+4, column+4), false);
+            self.cells.set(self.get_index(row+4, column+5), false);
+            self.cells.set(self.get_index(row+4, column+6), true);
+
+            self.cells.set(self.get_index(row+3, column-6), true);
+            self.cells.set(self.get_index(row+3, column-5), false);
+            self.cells.set(self.get_index(row+3, column-4), false);
+            self.cells.set(self.get_index(row+3, column-3), false);
+            self.cells.set(self.get_index(row+3, column-2), false);
+            self.cells.set(self.get_index(row+3, column-1), true);
+            self.cells.set(self.get_index(row+3, column), false);
+            self.cells.set(self.get_index(row+3, column+1), true);
+            self.cells.set(self.get_index(row+3, column+2), false);
+            self.cells.set(self.get_index(row+3, column+3), false);
+            self.cells.set(self.get_index(row+3, column+4), false);
+            self.cells.set(self.get_index(row+3, column+5), false);
+            self.cells.set(self.get_index(row+3, column+6), true);
+
+            self.cells.set(self.get_index(row+2, column-6), true);
+            self.cells.set(self.get_index(row+2, column-5), false);
+            self.cells.set(self.get_index(row+2, column-4), false);
+            self.cells.set(self.get_index(row+2, column-3), false);
+            self.cells.set(self.get_index(row+2, column-2), false);
+            self.cells.set(self.get_index(row+2, column-1), true);
+            self.cells.set(self.get_index(row+2, column), false);
+            self.cells.set(self.get_index(row+2, column+1), true);
+            self.cells.set(self.get_index(row+2, column+2), false);
+            self.cells.set(self.get_index(row+2, column+3), false);
+            self.cells.set(self.get_index(row+2, column+4), false);
+            self.cells.set(self.get_index(row+2, column+5), false);
+            self.cells.set(self.get_index(row+2, column+6), true);
+
+            self.cells.set(self.get_index(row+1, column-6), false);
+            self.cells.set(self.get_index(row+1, column-5), false);
+            self.cells.set(self.get_index(row+1, column-4), true);
+            self.cells.set(self.get_index(row+1, column-3), true);
+            self.cells.set(self.get_index(row+1, column-2), true);
+            self.cells.set(self.get_index(row+1, column-1), false);
+            self.cells.set(self.get_index(row+1, column), false);
+            self.cells.set(self.get_index(row+1, column+1), false);
+            self.cells.set(self.get_index(row+1, column+2), true);
+            self.cells.set(self.get_index(row+1, column+3), true);
+            self.cells.set(self.get_index(row+1, column+4), true);
+            self.cells.set(self.get_index(row+1, column+5), false);
+            self.cells.set(self.get_index(row+1, column+6), false);
+
+            self.cells.set(self.get_index(row-6, column-6), false);
+            self.cells.set(self.get_index(row-6, column-5), false);
+            self.cells.set(self.get_index(row-6, column-4), true);
+            self.cells.set(self.get_index(row-6, column-3), true);
+            self.cells.set(self.get_index(row-6, column-2), true);
+            self.cells.set(self.get_index(row-6, column-1), false);
+            self.cells.set(self.get_index(row-6, column), false);
+            self.cells.set(self.get_index(row-6, column+1), false);
+            self.cells.set(self.get_index(row-6, column+2), true);
+            self.cells.set(self.get_index(row-6, column+3), true);
+            self.cells.set(self.get_index(row-6, column+4), true);
+            self.cells.set(self.get_index(row-6, column+5), false);
+            self.cells.set(self.get_index(row-6, column+6), false);
+
+            self.cells.set(self.get_index(row-5, column-6), false);
+            self.cells.set(self.get_index(row-5, column-5), false);
+            self.cells.set(self.get_index(row-5, column-4), false);
+            self.cells.set(self.get_index(row-5, column-3), false);
+            self.cells.set(self.get_index(row-5, column-2), false);
+            self.cells.set(self.get_index(row-5, column-1), false);
+            self.cells.set(self.get_index(row-5, column), false);
+            self.cells.set(self.get_index(row-5, column+1), false);
+            self.cells.set(self.get_index(row-5, column+2), false);
+            self.cells.set(self.get_index(row-5, column+3), false);
+            self.cells.set(self.get_index(row-5, column+4), false);
+            self.cells.set(self.get_index(row-5, column+5), false);
+            self.cells.set(self.get_index(row-5, column+6), false);
+
+            self.cells.set(self.get_index(row-4, column-6), true);
+            self.cells.set(self.get_index(row-4, column-5), false);
+            self.cells.set(self.get_index(row-4, column-4), false);
+            self.cells.set(self.get_index(row-4, column-3), false);
+            self.cells.set(self.get_index(row-4, column-2), false);
+            self.cells.set(self.get_index(row-4, column-1), true);
+            self.cells.set(self.get_index(row-4, column), false);
+            self.cells.set(self.get_index(row-4, column+1), true);
+            self.cells.set(self.get_index(row-4, column+2), false);
+            self.cells.set(self.get_index(row-4, column+3), false);
+            self.cells.set(self.get_index(row-4, column+4), false);
+            self.cells.set(self.get_index(row-4, column+5), false);
+            self.cells.set(self.get_index(row-4, column+6), true);
+
+            self.cells.set(self.get_index(row-3, column-6), true);
+            self.cells.set(self.get_index(row-3, column-5), false);
+            self.cells.set(self.get_index(row-3, column-4), false);
+            self.cells.set(self.get_index(row-3, column-3), false);
+            self.cells.set(self.get_index(row-3, column-2), false);
+            self.cells.set(self.get_index(row-3, column-1), true);
+            self.cells.set(self.get_index(row-3, column), false);
+            self.cells.set(self.get_index(row-3, column+1), true);
+            self.cells.set(self.get_index(row-3, column+2), false);
+            self.cells.set(self.get_index(row-3, column+3), false);
+            self.cells.set(self.get_index(row-3, column+4), false);
+            self.cells.set(self.get_index(row-3, column+5), false);
+            self.cells.set(self.get_index(row-3, column+6), true);
+
+            self.cells.set(self.get_index(row-2, column-6), true);
+            self.cells.set(self.get_index(row-2, column-5), false);
+            self.cells.set(self.get_index(row-2, column-4), false);
+            self.cells.set(self.get_index(row-2, column-3), false);
+            self.cells.set(self.get_index(row-2, column-2), false);
+            self.cells.set(self.get_index(row-2, column-1), true);
+            self.cells.set(self.get_index(row-2, column), false);
+            self.cells.set(self.get_index(row-2, column+1), true);
+            self.cells.set(self.get_index(row-2, column+2), false);
+            self.cells.set(self.get_index(row-2, column+3), false);
+            self.cells.set(self.get_index(row-2, column+4), false);
+            self.cells.set(self.get_index(row-2, column+5), false);
+            self.cells.set(self.get_index(row-2, column+6), true);
+
+            self.cells.set(self.get_index(row-1, column-6), false);
+            self.cells.set(self.get_index(row-1, column-5), false);
+            self.cells.set(self.get_index(row-1, column-4), true);
+            self.cells.set(self.get_index(row-1, column-3), true);
+            self.cells.set(self.get_index(row-1, column-2), true);
+            self.cells.set(self.get_index(row-1, column-1), false);
+            self.cells.set(self.get_index(row-1, column), false);
+            self.cells.set(self.get_index(row-1, column+1), false);
+            self.cells.set(self.get_index(row-1, column+2), true);
+            self.cells.set(self.get_index(row-1, column+3), true);
+            self.cells.set(self.get_index(row-1, column+4), true);
+            self.cells.set(self.get_index(row-1, column+5), false);
+            self.cells.set(self.get_index(row-1, column+6), false);
+
+            self.cells.set(self.get_index(row, column-6), false);
+            self.cells.set(self.get_index(row, column-5), false);
+            self.cells.set(self.get_index(row, column-4), false);
+            self.cells.set(self.get_index(row, column-3), false);
+            self.cells.set(self.get_index(row, column-2), false);
+            self.cells.set(self.get_index(row, column-1), false);
+            self.cells.set(self.get_index(row, column), false);
+            self.cells.set(self.get_index(row, column+1), false);
+            self.cells.set(self.get_index(row, column+2), false);
+            self.cells.set(self.get_index(row, column+3), false);
+            self.cells.set(self.get_index(row, column+4), false);
+            self.cells.set(self.get_index(row, column+5), false);
+            self.cells.set(self.get_index(row, column+6), false);
+        }
+    }
+
+    pub fn add_glider(&mut self, row: u32, column: u32) {
+        if row > 0 && column > 0 && row < self.height - 1 && column < self.width - 1 {
+            self.cells.set(self.get_index(row-1, column-1), false);
+            self.cells.set(self.get_index(row-1, column), false);
+            self.cells.set(self.get_index(row-1, column+1), true);
+            self.cells.set(self.get_index(row, column-1), true);
+            self.cells.set(self.get_index(row, column), false);
+            self.cells.set(self.get_index(row, column+1), true);
+            self.cells.set(self.get_index(row+1, column-1), false);
+            self.cells.set(self.get_index(row+1, column), true);
+            self.cells.set(self.get_index(row+1, column+1), true);
+        }
+    }
+
+    pub fn toggle_cell(&mut self, row: u32, column: u32) {
+        let idx = self.get_index(row, column);
+        self.cells.toggle(idx);
+    }
+
     pub fn width(&self) -> u32 {
         self.width
     }
@@ -73,7 +279,7 @@ impl Universe {
         count
     }
 
-    fn reset_cells(&mut self) {
+    pub fn reset_cells(&mut self) {
         let size = (self.width * self.height) as usize;
         let mut cells = FixedBitSet::with_capacity(size);
 
